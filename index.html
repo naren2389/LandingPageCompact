@@ -1,416 +1,216 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>GMAT - Fast Mobile Quote & Save Up to 30%</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: { sans: ['Inter', 'sans-serif'] },
-                    colors: {
-                        gmat: {
-                            navy: '#0B132B',
-                            blue: '#1C2541',
-                            accent: '#0066FF',
-                            emerald: '#10B981',
-                            amber: '#F59E0B'
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .gradient-hero {
-            background: linear-gradient(165deg, #0B132B 0%, #1C2541 60%, #0066FF 100%);
-        }
-        .emerald-btn {
-            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-        }
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        /* Mobile Touch Target Fixes */
-        button, input, select {
-            min-height: 44px;
-        }
-    </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Compare Car &amp; Motorcycle Insurance | GMAT</title>
+<meta name="description" content="Compare car and motorcycle insurance quotes with GMAT. Save up to 30%. Free quote, monthly lucky draw, claims help and renewal reminders.">
+<meta name="theme-color" content="#063f2b" />
+<style>
+:root{
+  --green-950:#073b2a;--green-900:#0a563b;--green-700:#0f8a57;--green-500:#16b874;--green-100:#eaf8f1;
+  --ink:#10231b;--muted:#67766f;--line:#dfe8e3;--soft:#f5f8f6;--white:#fff;--amber:#ffbf3f;--red:#d1495b;
+  --shadow:0 18px 45px rgba(16,35,27,.12);--radius:22px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#edf3ef;color:var(--ink);-webkit-font-smoothing:antialiased}
+button,input{font:inherit} button{cursor:pointer} a{text-decoration:none;color:inherit}
+.app{width:min(100%,480px);margin:0 auto;min-height:100vh;background:var(--white);box-shadow:0 0 60px rgba(7,59,42,.08);position:relative;padding-bottom:92px}
+.topbar{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.94);backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-bottom:1px solid rgba(223,232,227,.88)}
+.logo{height:34px;width:auto;display:block}.top-actions{display:flex;gap:8px;align-items:center}.icon-btn{width:42px;height:42px;border-radius:14px;border:1px solid var(--line);background:#fff;display:grid;place-items:center}.lang{height:42px;border:1px solid var(--line);background:#fff;border-radius:14px;padding:0 11px;font-size:12px;font-weight:800;color:var(--green-900)}
+.hero{position:relative;overflow:hidden;padding:24px 16px 30px;background:linear-gradient(150deg,#073b2a 0%,#0a563b 58%,#0e7d52 100%);color:white}.hero:before,.hero:after{content:"";position:absolute;border-radius:999px;filter:blur(2px);pointer-events:none}.hero:before{width:210px;height:210px;right:-110px;top:-82px;background:rgba(255,255,255,.08)}.hero:after{width:170px;height:170px;left:-85px;bottom:-90px;background:rgba(255,191,63,.10)}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);font-size:11px;font-weight:800;letter-spacing:.03em}.pulse{width:7px;height:7px;border-radius:50%;background:#71f2aa;box-shadow:0 0 0 5px rgba(113,242,170,.12)}
+.hero h1{margin:13px 0 8px;font-size:31px;line-height:1.04;letter-spacing:-.035em;max-width:390px}.hero h1 span{color:#c9ffdf}.hero p{margin:0;color:#d8ede3;font-size:13.5px;line-height:1.55;max-width:400px}
+.reward-card{margin-top:17px;border-radius:20px;padding:14px;background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.07));border:1px solid rgba(255,255,255,.17);display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}.reward-card strong{display:block;font-size:18px;margin:2px 0 3px}.reward-card small{color:#d8ede3;font-size:11px}.reward-badge{width:68px;height:68px;border-radius:20px;background:#fff;color:var(--green-900);display:grid;place-items:center;text-align:center;font-weight:900;line-height:1}.reward-badge b{font-size:23px}.reward-badge span{font-size:9px;letter-spacing:.04em}
+.quick-proof{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:12px}.proof{padding:10px 7px;border-radius:15px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);text-align:center}.proof b{display:block;font-size:11px}.proof span{display:block;color:#cfe4da;font-size:9px;margin-top:2px}
+.form-wrap{padding:0 14px;margin-top:-13px;position:relative;z-index:5}.quote-card{background:#fff;border-radius:24px;box-shadow:var(--shadow);border:1px solid #e7eee9;overflow:hidden}.quote-head{padding:15px 16px 12px;display:flex;align-items:flex-start;justify-content:space-between;gap:10px}.quote-head h2{margin:0;font-size:17px;letter-spacing:-.02em}.quote-head p{margin:4px 0 0;font-size:11px;color:var(--muted)}.step-pill{white-space:nowrap;background:var(--green-100);color:var(--green-900);font-size:10px;font-weight:900;padding:7px 9px;border-radius:999px}
+.progress{height:4px;background:#eef3f0}.progress>span{display:block;height:100%;width:50%;background:linear-gradient(90deg,var(--green-700),var(--green-500));transition:.3s ease}
+.form-body{padding:15px 16px 16px}.vehicle-switch{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:5px;background:var(--soft);border-radius:15px;margin-bottom:14px}.vehicle-switch button{border:0;background:transparent;color:#6d7a73;padding:10px 8px;border-radius:11px;font-size:12px;font-weight:850}.vehicle-switch button.active{background:#fff;color:var(--green-900);box-shadow:0 3px 12px rgba(16,35,27,.08)}
+.field{margin-top:12px}.label-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}.field label{font-size:11px;font-weight:850}.hint{font-size:9px;color:var(--green-700);font-weight:800}.input-wrap{position:relative}.input-wrap input{width:100%;height:50px;border:1.5px solid var(--line);border-radius:14px;padding:0 13px;background:#fbfdfc;color:var(--ink);outline:none;transition:.2s ease;font-size:14px}.input-wrap input:focus{background:#fff;border-color:var(--green-500);box-shadow:0 0 0 4px rgba(22,184,116,.10)}.field-note{font-size:9.5px;color:var(--muted);line-height:1.45;margin-top:6px}.row{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.primary{width:100%;height:52px;border:0;border-radius:15px;background:linear-gradient(135deg,#0f8a57,#13b574);color:white;font-weight:900;font-size:13px;margin-top:14px;box-shadow:0 10px 22px rgba(15,138,87,.22);display:flex;align-items:center;justify-content:center;gap:8px}.primary:active{transform:translateY(1px)}.secondary{width:100%;height:46px;border-radius:14px;background:#fff;color:var(--green-900);border:1.5px solid var(--line);font-weight:850;font-size:12px;margin-top:9px}.security{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:11px;color:#75847c;font-size:9.5px}.security b{color:var(--green-700)}
+.step{display:none}.step.active{display:block}.mini-summary{display:flex;justify-content:space-between;gap:10px;padding:11px 12px;border-radius:14px;background:var(--soft);border:1px solid var(--line);margin-bottom:12px}.mini-summary div{font-size:10px;color:var(--muted)}.mini-summary b{display:block;color:var(--ink);font-size:12px;margin-top:2px}
+.section{padding:24px 16px 0}.section-title{display:flex;justify-content:space-between;align-items:flex-end;gap:12px}.section-title h3{font-size:18px;margin:0;letter-spacing:-.02em}.section-title p{margin:0;font-size:10px;color:var(--muted)}
+.logo-strip{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-top:13px}.partner{height:58px;border:1px solid var(--line);border-radius:16px;background:#fff;display:grid;place-items:center;font-size:12px;font-weight:900;color:#33453c;box-shadow:0 6px 16px rgba(16,35,27,.04)}
+.benefits{display:grid;gap:9px;margin-top:13px}.benefit{display:grid;grid-template-columns:42px 1fr;gap:11px;align-items:start;padding:13px;border:1px solid var(--line);border-radius:17px;background:#fff}.benefit .ico{width:42px;height:42px;border-radius:14px;background:var(--green-100);display:grid;place-items:center;font-size:18px}.benefit h4{margin:1px 0 3px;font-size:13px}.benefit p{margin:0;font-size:10.5px;color:var(--muted);line-height:1.45}
+.reward-section{margin:24px 16px 0;border-radius:22px;background:#10261c;color:white;padding:18px;position:relative;overflow:hidden}.reward-section:after{content:"";position:absolute;width:130px;height:130px;border-radius:50%;right:-45px;bottom:-65px;background:rgba(255,191,63,.12)}.reward-section .kicker{font-size:10px;color:#9decc0;font-weight:850;text-transform:uppercase;letter-spacing:.08em}.reward-section h3{font-size:20px;margin:6px 0}.reward-section p{font-size:11px;line-height:1.5;color:#c9d8d0;margin:0;max-width:310px}.reward-points{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.reward-points span{font-size:9.5px;padding:7px 9px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)}
+.faq{margin-top:12px;border-top:1px solid var(--line)}details{border-bottom:1px solid var(--line)}summary{list-style:none;padding:15px 2px;font-size:12px;font-weight:850;display:flex;justify-content:space-between;gap:8px;cursor:pointer}summary::-webkit-details-marker{display:none}details p{margin:-4px 0 15px;font-size:10.5px;line-height:1.5;color:var(--muted)}
+.footer{padding:28px 16px 20px;color:#7b8982;font-size:9.5px;text-align:center}.footer img{height:25px;opacity:.76;margin-bottom:9px}
+.sticky-cta{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(100%,480px);z-index:35;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.95);backdrop-filter:blur(16px);border-top:1px solid var(--line);display:grid;grid-template-columns:48px 1fr;gap:8px}.wa{border:1px solid var(--line);background:#fff;border-radius:14px;font-size:19px}.sticky-cta .primary{margin:0;height:48px}
+.toast{position:fixed;left:50%;bottom:92px;transform:translate(-50%,20px);width:min(calc(100% - 28px),452px);background:#10261c;color:white;padding:12px 14px;border-radius:15px;font-size:11px;opacity:0;pointer-events:none;transition:.28s ease;z-index:60;box-shadow:var(--shadow)}.toast.show{opacity:1;transform:translate(-50%,0)}
+.modal{position:fixed;inset:0;z-index:70;background:rgba(5,18,12,.68);display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(100%,480px);background:#fff;border-radius:26px 26px 0 0;padding:19px 16px calc(20px + env(safe-area-inset-bottom));box-shadow:0 -20px 60px rgba(0,0,0,.16)}.handle{width:42px;height:4px;background:#dfe5e2;border-radius:999px;margin:0 auto 15px}.success{width:52px;height:52px;background:var(--green-100);color:var(--green-700);display:grid;place-items:center;border-radius:16px;font-size:22px}.sheet h3{font-size:20px;margin:12px 0 5px}.sheet p{font-size:11px;color:var(--muted);line-height:1.55}.quote-preview{margin:14px 0;display:grid;gap:8px}.quote-row{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:14px;background:var(--soft);border:1px solid var(--line);font-size:11px}.quote-row b{font-size:12px}.quote-row span{color:var(--green-700);font-weight:900}.close-btn{position:absolute;right:18px;top:18px;border:0;background:#f2f5f3;border-radius:50%;width:36px;height:36px}
+
+.lead-hero{position:relative;overflow:hidden;padding:28px 24px 22px;color:#123526;background:#f8f6ef url("https://www.image2url.com/r2/default/images/1790848547632-a8fbd6a5-7cc8-46ea-a356-2880f67374ce.png") center bottom/cover no-repeat;isolation:isolate}.lead-hero:before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(180deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.89) 30%,rgba(255,251,241,.75) 58%,rgba(244,250,245,.64) 100%)}.lead-hero:after{content:"";position:absolute;inset:auto -80px -90px auto;width:260px;height:260px;border-radius:50%;z-index:-1;background:radial-gradient(circle,rgba(24,131,74,.18),rgba(24,131,74,0) 70%)}.lead-hero h1{position:relative;z-index:1;margin:0 0 9px;font-size:34px;line-height:1.06;letter-spacing:-.04em;font-weight:950;color:#163827;text-shadow:0 1px 0 rgba(255,255,255,.7)}.lead-hero h1 .accent{color:#11814a}.lead-hero>p{position:relative;z-index:1;margin:0 0 18px;color:#365b49;font-size:14.5px;line-height:1.52;max-width:390px}.special-card{position:relative;z-index:1;border:1px solid rgba(22,99,53,.18);background:rgba(255,255,255,.86);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:18px;padding:17px 18px;display:grid;grid-template-columns:1fr 96px;align-items:center;min-height:126px;box-shadow:0 12px 26px rgba(27,73,46,.10)}.special-kicker{font-size:11px;font-weight:950;color:#13814a;letter-spacing:.06em}.special-card h2{margin:7px 0 4px;font-size:25px;line-height:1;color:#173c29}.special-card h2 span{color:#c7242b}.special-card p{margin:0;font-size:12.5px;color:#4e695c}.car-line{display:flex;justify-content:center;align-items:center}.car-line svg{width:84px;height:auto;stroke:#13814a;stroke-width:1.8;fill:none;filter:drop-shadow(0 4px 10px rgba(19,129,74,.12))}.lead-benefits{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.lead-benefit{border:1px solid rgba(22,99,53,.15);background:rgba(255,255,255,.84);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-radius:14px;padding:12px 11px;display:grid;grid-template-columns:38px 1fr;gap:9px;align-items:center;box-shadow:0 8px 18px rgba(27,73,46,.07)}.lead-benefit .circle{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:17px}.lead-benefit:nth-child(1) .circle{background:#e1f3e7;color:#14854d}.lead-benefit:nth-child(2) .circle{background:#eaf1ed;color:#1d6b43}.lead-benefit:nth-child(3) .circle{background:#fff3cf;color:#a97800}.lead-benefit:nth-child(4) .circle{background:#edf5ee;color:#2d6d48}.lead-benefit b{display:block;font-size:11.5px;color:#173c29}.lead-benefit span{display:block;margin-top:3px;font-size:9.5px;color:#62786b}.lead-form-wrap{padding:0 8px;background:linear-gradient(180deg,#f6f8f5 0%,#f4f6f8 100%)}.lead-card{background:#fff;border-radius:0 0 24px 24px;padding:20px 24px 24px;box-shadow:0 10px 22px rgba(15,31,61,.13)}.lead-card .field{margin-top:18px}.lead-card .field:first-child{margin-top:0}.lead-card label{font-size:14px;font-weight:900;color:#172d50;text-transform:uppercase;display:block;margin-bottom:8px}.lead-card .req{color:#ef4444}.icon-input{position:relative}.icon-input .ficon{position:absolute;left:16px;top:50%;transform:translateY(-50%);font-size:15px;color:#9ca3af;pointer-events:none}.icon-input input{width:100%;height:56px;border:1.5px solid #cbd5e1;border-radius:13px;background:#f8fafc;padding:0 16px 0 54px;font-size:15px;color:#172d50;outline:none;transition:.2s}.icon-input input:focus{border-color:#0fa477;background:#fff;box-shadow:0 0 0 4px rgba(15,164,119,.1)}.consent-list{display:grid;gap:12px;margin-top:28px}.consent-row{display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.45;color:#29415e}.consent-row input{width:18px;height:18px;accent-color:#1687ef;flex:0 0 auto;margin-top:1px}.consent-row a{color:#0074bd;text-decoration:underline}.lead-submit{width:100%;min-height:64px;border:0;border-radius:18px;background:#08a278;color:#fff;font-weight:950;font-size:16px;margin-top:18px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;gap:12px}.lead-submit .gift{color:#ffdf1f;font-size:22px}.lead-security{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:20px;font-size:11px;color:#68778d}.lead-security span:nth-child(1){color:#68778d}.lead-security b{font-weight:500}.lead-note{font-size:10px;color:#8290a3;text-align:center;margin-top:10px}.lead-card-head{text-align:center;margin-bottom:6px}.lead-card-head h2{font-size:18px;margin:0;color:#172d50}.lead-card-head p{font-size:11px;color:#75849a;margin:5px 0 0}.sticky-cta.lead-sticky{grid-template-columns:48px 1fr}.sticky-cta.lead-sticky .primary{background:#08a278}
+@media(min-width:700px){body{padding:22px 0}.app{border-radius:28px;overflow:hidden;min-height:calc(100vh - 44px)}.topbar{top:0}.sticky-cta{bottom:22px;border-radius:0 0 28px 28px}.modal{align-items:center}.sheet{border-radius:26px;max-width:460px}}
+
+/* v5 */
+.wasvg{display:block;width:30px;height:30px;color:#25D366}.wa .wasvg{width:28px;height:28px}.primary .wasvg{display:inline-block;vertical-align:middle;width:22px;height:22px;color:#fff}
+
+.icon-btn,.wa{display:grid;place-items:center}.waimg{display:block;width:26px;height:26px;object-fit:contain}.waimg.sm{display:inline-block;vertical-align:middle;width:22px;height:22px;background:#fff;border-radius:6px;padding:2px}
+
+.partner{padding:8px 14px}.partner img{display:block;max-width:100%;max-height:40px;width:auto;height:auto;object-fit:contain}
+/* v2 fixes */
+.lead-card .consent-row{display:flex;margin:0;font-size:12.5px;font-weight:400;letter-spacing:0;text-transform:none;color:#29415e}
+
+.lead-hero{padding:22px 20px 18px}.lead-hero h1{font-size:30px}.lead-hero>p{font-size:14px;margin-bottom:14px}
+.special-card{min-height:104px;padding:14px 16px}.lead-benefits{margin-top:12px;gap:8px}.lead-benefit{padding:10px}.lead-benefit b{font-size:12.5px}.lead-benefit span{font-size:11px}
+.lead-card label,.lead-card .lbl{font-size:12px;font-weight:800;letter-spacing:.04em;color:#172d50;display:block;margin-bottom:8px}
+.icon-input input{font-size:16px}.ficon{display:grid;place-items:center}.ficon svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.icon-input input.bad{border-color:#d1495b;background:#fff7f7}
+.err{display:none;color:#c0392b;font-size:12px;margin-top:6px}.err.show{display:block}
+.consent-row{font-size:12.5px}.consent-list{margin-top:22px}.ack{font-size:11.5px;color:#5b6b80;line-height:1.5;margin:0;background:#f3f8f5;border-radius:12px;padding:10px 12px}
+.lead-security{font-size:12px}.sec{display:inline-flex;align-items:center;gap:6px}.sec svg{width:15px;height:15px;stroke:#08a278;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.lead-submit:disabled{opacity:.7}.lead-submit{min-height:58px;font-size:15px}
+.benefit p,.section-title p,.reward-section p,.reward-points span,.footer{font-size:11.5px}details p{font-size:12px}summary{font-size:13px}
+.payimg{margin-top:13px;border:1px solid var(--line);border-radius:16px;padding:10px;background:#fff}.payimg img{display:block;width:100%;height:auto}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.chips span{font-size:12px;font-weight:700;padding:8px 12px;border-radius:999px;background:var(--green-100);color:var(--green-900)}
+a.secondary{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 12px}
+.sticky-cta{transition:transform .25s ease}.sticky-cta.hide{transform:translate(-50%,130%)}
+</style>
 </head>
-<body class="font-sans bg-slate-100 text-slate-800 antialiased flex flex-col min-h-screen">
+<body>
+<div class="app">
+  <header class="topbar">
+    <a href="#" aria-label="GMAT home"><img class="logo" src="https://d9p96y8yn87dz.cloudfront.net/GMATImages/Logo/GMATTransparent.png" alt="GMAT" /></a>
+    <div class="top-actions">
+      <button class="lang" id="langBtn" type="button">EN · BM</button>
+      <a class="icon-btn" href="https://wa.me/60123456789" target="_blank" aria-label="WhatsApp"><svg class="wasvg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+    </div>
+  </header>
 
-    <!-- DEMO VERSION SWITCHER BAR (COMPACT MOBILE FIXED TOP) -->
-    <div class="bg-slate-900 text-white text-[11px] py-1.5 px-3 sticky top-0 z-50 border-b border-slate-800 shadow-sm flex items-center justify-between">
-        <div class="flex items-center space-x-1 font-bold text-amber-400 shrink-0">
-            <i class="fa-solid fa-sliders"></i>
-            <span>MODE:</span>
-        </div>
-        
-        <div class="flex items-center space-x-1 bg-slate-800 p-0.5 rounded-lg">
-            <button id="btnVersionB" onclick="switchVersion('B')" class="px-2.5 py-1 rounded-md font-bold text-[10px] bg-emerald-500 text-white transition-all">
-                Ver B: Full (IC+Vehicle)
-            </button>
-            <button id="btnVersionA" onclick="switchVersion('A')" class="px-2.5 py-1 rounded-md font-bold text-[10px] text-slate-400 hover:text-white transition-all">
-                Ver A: Simple
-            </button>
-        </div>
+  <section class="lead-hero">
+    <h1 data-en='Save Up To <span class="accent">30%</span> On Car &amp; Motorcycle Insurance' data-bm='Jimat Sehingga <span class="accent">30%</span> Untuk Insurans Kereta &amp; Motosikal'>Save Up To <span class="accent">30%</span> On Car &amp; Motorcycle Insurance</h1>
+    <p data-en="Compare prices from top insurance providers & get the best protection with GMAT." data-bm="Bandingkan harga daripada penyedia insurans terkemuka & dapatkan perlindungan terbaik bersama GMAT.">Compare prices from top insurance providers & get the best protection with GMAT.</p>
+
+    <div class="special-card">
+      <div>
+        <div class="special-kicker" data-en="SPECIAL REWARD" data-bm="GANJARAN ISTIMEWA">SPECIAL REWARD</div>
+        <h2 data-en='Get a <span>RM30</span> voucher' data-bm='Dapatkan baucar <span>RM30</span>'>Get a <span>RM30</span> voucher</h2>
+        <p data-en="eWallet PIN or fuel voucher · T&amp;C apply" data-bm="Pin eWallet atau baucar petrol · T&amp;C terpakai">eWallet PIN or fuel voucher · T&amp;C apply</p>
+      </div>
+      <div class="car-line" aria-hidden="true">
+        <svg viewBox="0 0 120 70"><path d="M16 45h6l6-17c1-4 4-6 8-6h47c4 0 7 2 9 6l6 17h6c4 0 7 3 7 7v6H9v-6c0-4 3-7 7-7Z"/><path d="M32 30h50"/><circle cx="31" cy="58" r="10"/><circle cx="89" cy="58" r="10"/><path d="M44 22 52 12h26l9 10"/></svg>
+      </div>
     </div>
 
-    <!-- COMPACT MOBILE HEADER -->
-    <header class="bg-white border-b border-slate-200 sticky top-[33px] z-40 shadow-xs px-4 py-2.5 flex items-center justify-between">
-        <a href="https://gmat.com.my/" target="_blank" class="flex items-center">
-            <img src="https://d9p96y8yn87dz.cloudfront.net/GMATImages/Logo/GMATTransparent.png" alt="GMAT.my Logo" class="h-8 sm:h-9 w-auto object-contain" />
-        </a>
-
-        <a href="https://wa.me/60123456789?text=Hi%20GMAT,%20I%20want%20a%20free%20quote" target="_blank" class="px-3 py-1.5 rounded-full text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 flex items-center space-x-1.5 active:scale-95 transition-transform">
-            <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
-            <span>WhatsApp CS</span>
-        </a>
-    </header>
-
-    <!-- MAIN HERO & COMPACT FORM (MINIMAL SCROLL ZONE) -->
-    <main class="gradient-hero text-white px-3 sm:px-6 pt-5 pb-8 relative overflow-hidden">
-        <div class="max-w-md mx-auto space-y-4">
-
-            <!-- Compact Headline -->
-            <div class="text-center space-y-1">
-                <span class="inline-block px-2.5 py-0.5 rounded-full bg-amber-400/20 border border-amber-400/40 text-amber-300 text-[10px] font-bold tracking-wide uppercase">
-                    <i class="fa-solid fa-bolt mr-1"></i> Fast 1-Min Renewal Quote
-                </span>
-                <h1 class="text-2xl font-black leading-tight tracking-tight">
-                    Save Up to <span class="text-amber-400">30% OFF</span> Insurance
-                </h1>
-                <p class="text-slate-300 text-xs font-normal">Compare top panel rates & claim instant TnG eWallet perks.</p>
-            </div>
-
-            <!-- Swipeable / Compact Perks Badge Grid (2x2 Grid for Mobile) -->
-            <div class="grid grid-cols-2 gap-2 text-left text-slate-900">
-                <div class="bg-white/95 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center space-x-2 shadow-sm">
-                    <div class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center font-bold shrink-0 text-xs">
-                        <i class="fa-solid fa-percent"></i>
-                    </div>
-                    <div class="leading-tight">
-                        <div class="text-[11px] font-extrabold text-slate-900">Up to 30% Savings</div>
-                        <div class="text-[9px] text-slate-500">Quote comparison</div>
-                    </div>
-                </div>
-
-                <div class="bg-white/95 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center space-x-2 shadow-sm">
-                    <div class="w-7 h-7 rounded-lg bg-amber-100 text-amber-600 flex items-center justify-center font-bold shrink-0 text-xs">
-                        <i class="fa-solid fa-wallet"></i>
-                    </div>
-                    <div class="leading-tight">
-                        <div class="text-[11px] font-extrabold text-slate-900">RM10-30 TnG Pin</div>
-                        <div class="text-[9px] text-slate-500">Upon renewal</div>
-                    </div>
-                </div>
-
-                <div class="bg-white/95 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center space-x-2 shadow-sm">
-                    <div class="w-7 h-7 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center font-bold shrink-0 text-xs">
-                        <i class="fa-solid fa-gas-pump"></i>
-                    </div>
-                    <div class="leading-tight">
-                        <div class="text-[11px] font-extrabold text-slate-900">Petronas Fuel Card</div>
-                        <div class="text-[9px] text-slate-500">Monthly lucky draw</div>
-                    </div>
-                </div>
-
-                <div class="bg-white/95 backdrop-blur rounded-xl p-2.5 border border-white/20 flex items-center space-x-2 shadow-sm">
-                    <div class="w-7 h-7 rounded-lg bg-purple-100 text-purple-600 flex items-center justify-center font-bold shrink-0 text-xs">
-                        <i class="fa-solid fa-headset"></i>
-                    </div>
-                    <div class="leading-tight">
-                        <div class="text-[11px] font-extrabold text-slate-900">Claims Assist</div>
-                        <div class="text-[9px] text-slate-500">Full CS support</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- COMPACT FORM CARD -->
-            <div class="bg-white text-slate-900 rounded-2xl p-4 sm:p-5 shadow-2xl border border-slate-100">
-                
-                <!-- Vehicle Type Tabs -->
-                <div class="grid grid-cols-2 gap-1.5 p-1 bg-slate-100 rounded-xl mb-4">
-                    <button type="button" id="tabCar" onclick="setVehicleType('car')" class="py-2 rounded-lg text-xs font-bold flex items-center justify-center space-x-1.5 transition-all bg-white text-blue-700 shadow-xs">
-                        <i class="fa-solid fa-car text-sm"></i>
-                        <span>Car Insurance</span>
-                    </button>
-                    <button type="button" id="tabMotor" onclick="setVehicleType('motorcycle')" class="py-2 rounded-lg text-xs font-bold flex items-center justify-center space-x-1.5 transition-all text-slate-500 hover:text-slate-900">
-                        <i class="fa-solid fa-motorcycle text-sm"></i>
-                        <span>Motorcycle</span>
-                    </button>
-                </div>
-
-                <!-- MAIN FORM -->
-                <form id="gmatMobileForm" onsubmit="handleFormSubmit(event)" class="space-y-3">
-                    <input type="hidden" id="vehicleTypeInput" value="car">
-
-                    <!-- Name -->
-                    <div>
-                        <label class="block text-[10px] font-extrabold text-slate-600 uppercase mb-0.5">Full Name *</label>
-                        <input type="text" id="fullName" required placeholder="e.g. Ahmad Razak" 
-                            class="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white">
-                    </div>
-
-                    <!-- Mobile -->
-                    <div>
-                        <label class="block text-[10px] font-extrabold text-slate-600 uppercase mb-0.5">Mobile Number (WhatsApp) *</label>
-                        <div class="relative">
-                            <span class="absolute inset-y-0 left-0 pl-2.5 flex items-center text-xs font-bold text-slate-400">+60</span>
-                            <input type="tel" id="mobileNumber" required placeholder="12 345 6789" 
-                                class="w-full pl-10 pr-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white">
-                        </div>
-                    </div>
-
-                    <!-- Email -->
-                    <div>
-                        <label class="block text-[10px] font-extrabold text-slate-600 uppercase mb-0.5">Email Address *</label>
-                        <input type="email" id="emailAddress" required placeholder="ahmad@example.com" 
-                            class="w-full px-3 py-2 text-xs bg-slate-50 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white">
-                    </div>
-
-                    <!-- VERSION B EXTRA FIELDS (VEHICLE NO & NRIC) -->
-                    <div id="versionBFields" class="space-y-3 pt-1 border-t border-dashed border-slate-200">
-                        <div>
-                            <div class="flex justify-between items-center mb-0.5">
-                                <label class="block text-[10px] font-extrabold text-slate-700 uppercase">Vehicle Registration No. *</label>
-                                <span class="text-[9px] text-emerald-600 font-bold bg-emerald-50 px-1 rounded">JPJ Lookup</span>
-                            </div>
-                            <input type="text" id="vehicleNumber" placeholder="e.g. WYY 1234" 
-                                class="w-full px-3 py-2 text-xs bg-amber-50/50 border border-amber-300 rounded-lg uppercase font-bold tracking-wider text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white">
-                        </div>
-
-                        <div>
-                            <div class="flex justify-between items-center mb-0.5">
-                                <label class="block text-[10px] font-extrabold text-slate-700 uppercase">NRIC / IC Number *</label>
-                                <span class="text-[9px] text-slate-400 font-medium"><i class="fa-solid fa-lock text-[8px]"></i> Encrypted</span>
-                            </div>
-                            <input type="text" id="nricNumber" maxlength="14" placeholder="e.g. 900101145555" 
-                                class="w-full px-3 py-2 text-xs bg-amber-50/50 border border-amber-300 rounded-lg font-mono focus:outline-none focus:ring-2 focus:ring-blue-600 focus:bg-white">
-                            <p class="text-[9px] text-blue-700 mt-1 flex items-center">
-                                <i class="fa-solid fa-circle-info mr-1"></i> IC is required by insurers to verify NCD discount.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Checkboxes -->
-                    <div class="space-y-1.5 pt-1 text-[10px] text-slate-600">
-                        <label class="flex items-start space-x-2 cursor-pointer">
-                            <input type="checkbox" id="newsletterConsent" checked class="mt-0.5 rounded text-blue-600 w-3.5 h-3.5">
-                            <span>Send renewal reminders & monthly lucky draw updates.</span>
-                        </label>
-                        <label class="flex items-start space-x-2 cursor-pointer">
-                            <input type="checkbox" id="pdpaConsent" required checked class="mt-0.5 rounded text-blue-600 w-3.5 h-3.5">
-                            <span>I agree to <a href="#" class="underline text-blue-600">PDPA Terms</a> & data privacy.</span>
-                        </label>
-                    </div>
-
-                    <!-- SUBMIT CTA -->
-                    <button type="submit" class="w-full py-3 px-4 rounded-xl text-xs font-black text-white emerald-btn shadow-md active:scale-98 transition-transform flex items-center justify-center space-x-2">
-                        <span>GET 30% SAVINGS QUOTE & ENTER DRAW</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
-                    <!-- Trust Micro-Badge -->
-                    <div class="text-center text-[10px] text-slate-400 font-medium pt-0.5">
-                        <i class="fa-solid fa-shield-halved text-emerald-500 mr-1"></i> 100% Free & No-Obligation Instant Quote
-                    </div>
-
-                </form>
-            </div>
-
-        </div>
-    </main>
-
-    <!-- COLLAPSIBLE ACCORDION SECTIONS (ZERO CLUTTER MOBILE DESIGN) -->
-    <section class="max-w-md mx-auto w-full px-3 py-6 space-y-3">
-
-        <!-- Accordion 1: Partner Insurers & Payment Channels -->
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
-            <button onclick="toggleAccordion('partnersAccordion')" class="w-full px-4 py-3 text-left font-bold text-xs text-slate-800 flex items-center justify-between bg-slate-50 hover:bg-slate-100 transition-colors">
-                <span class="flex items-center space-x-2">
-                    <i class="fa-solid fa-building-columns text-blue-600"></i>
-                    <span>Panel Insurers & Payment Channels</span>
-                </span>
-                <i id="partnersAccordionIcon" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-            </button>
-
-            <div id="partnersAccordion" class="hidden p-4 space-y-4 border-t border-slate-100 text-xs text-slate-600">
-                <div>
-                    <div class="text-[10px] font-extrabold text-slate-400 uppercase mb-2">Panel Insurers & Takaful</div>
-                    <div class="grid grid-cols-3 gap-2 text-center font-extrabold text-slate-700">
-                        <div class="p-2 border rounded-lg bg-slate-50">Etiqa</div>
-                        <div class="p-2 border rounded-lg bg-slate-50">Allianz</div>
-                        <div class="p-2 border rounded-lg bg-slate-50">Zurich</div>
-                        <div class="p-2 border rounded-lg bg-slate-50">Takaful MY</div>
-                        <div class="p-2 border rounded-lg bg-slate-50">MSIG</div>
-                        <div class="p-2 border rounded-lg bg-slate-50">Tune Protect</div>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="text-[10px] font-extrabold text-slate-400 uppercase mb-2">Supported Payment Gateways</div>
-                    <div class="flex flex-wrap gap-1.5 text-[11px] font-semibold text-slate-600">
-                        <span class="px-2 py-1 bg-slate-100 rounded">FPX Online Banking</span>
-                        <span class="px-2 py-1 bg-slate-100 rounded">Touch 'n Go eWallet</span>
-                        <span class="px-2 py-1 bg-slate-100 rounded">GrabPay</span>
-                        <span class="px-2 py-1 bg-slate-100 rounded">Visa / Mastercard</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Accordion 2: Why Choose GMAT (Services & Value Add) -->
-        <div class="bg-white border border-slate-200 rounded-xl overflow-hidden shadow-xs">
-            <button onclick="toggleAccordion('servicesAccordion')" class="w-full px-4 py-3 text-left font-bold text-xs text-slate-800 flex items-center justify-between bg-slate-50 hover:bg-slate-100 transition-colors">
-                <span class="flex items-center space-x-2">
-                    <i class="fa-solid fa-star text-amber-500"></i>
-                    <span>Why Renew With GMAT? (Services)</span>
-                </span>
-                <i id="servicesAccordionIcon" class="fa-solid fa-chevron-down text-slate-400 transition-transform"></i>
-            </button>
-
-            <div id="servicesAccordion" class="hidden p-4 space-y-3 border-t border-slate-100 text-xs text-slate-600">
-                <div class="flex items-start space-x-2.5">
-                    <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
-                    <div>
-                        <strong class="text-slate-800">Claims Assistance:</strong> Dedicated CS team guidance during accidents, towing, and claims.
-                    </div>
-                </div>
-                <div class="flex items-start space-x-2.5">
-                    <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
-                    <div>
-                        <strong class="text-slate-800">Custom Coverage Advice:</strong> Agreed Value vs Market Value recommendations tailored to your car.
-                    </div>
-                </div>
-                <div class="flex items-start space-x-2.5">
-                    <i class="fa-solid fa-circle-check text-emerald-500 mt-0.5"></i>
-                    <div>
-                        <strong class="text-slate-800">Automatic Renewal Reminders:</strong> Free alerts 30 days before roadtax & policy expiry.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-slate-900 text-slate-400 text-[11px] py-6 px-4 mt-auto border-t border-slate-800 text-center space-y-2">
-        <a href="https://gmat.com.my/" target="_blank" class="inline-block">
-            <img src="https://d9p96y8yn87dz.cloudfront.net/GMATImages/Logo/GMATTransparent.png" alt="GMAT Logo" class="h-6 w-auto brightness-0 invert opacity-80 mx-auto" />
-        </a>
-        <p>© 2026 GMAT.my Insurance Portal. All rights reserved.</p>
-        <p class="text-[10px] text-slate-500">PDPA Compliant | Safe & Encrypted Data Handling</p>
-    </footer>
-
-    <!-- DEV MODAL FOR SUBMISSION PAYLOAD PREVIEW -->
-    <div id="devModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-xs z-50 hidden items-center justify-center p-3">
-        <div class="bg-slate-900 border border-slate-700 rounded-xl max-w-sm w-full p-4 text-white text-xs shadow-2xl space-y-3">
-            <div class="flex items-center justify-between border-b border-slate-800 pb-2">
-                <span class="font-bold text-emerald-400"><i class="fa-solid fa-check-circle mr-1"></i> Lead Captured</span>
-                <button onclick="closeDevModal()" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark"></i></button>
-            </div>
-            <p class="text-[11px] text-slate-300">Backend API Payload (Stitching & CS Export Ready):</p>
-            <div class="bg-slate-950 p-2.5 rounded-lg font-mono text-[10px] text-emerald-400 border border-slate-800 max-h-56 overflow-y-auto">
-                <pre id="jsonPayloadOutput"></pre>
-            </div>
-            <button onclick="closeDevModal()" class="w-full py-2 bg-emerald-500 text-slate-950 font-bold rounded-lg text-xs">Close</button>
-        </div>
+    <div class="lead-benefits">
+      <div class="lead-benefit"><div class="circle">%</div><div><b data-en="Save up to 30%" data-bm="Jimat hingga 30%">Save up to 30%</b><span data-en="Compare quotes" data-bm="Banding sebut harga">Compare quotes</span></div></div>
+      <div class="lead-benefit"><div class="circle">◆</div><div><b data-en="Licensed Panel" data-bm="Panel Berlesen">Licensed Panel</b><span data-en="Leading insurers" data-bm="Syarikat terkemuka">Leading insurers</span></div></div>
+      <div class="lead-benefit"><div class="circle">🎁</div><div><b data-en="Lucky Draw" data-bm="Cabutan Bertuah">Lucky Draw</b><span data-en="Monthly prizes" data-bm="Hadiah bulanan">Monthly prizes</span></div></div>
+      <div class="lead-benefit"><div class="circle">🎧</div><div><b data-en="Advisory Service" data-bm="Khidmat Nasihat">Advisory Service</b><span data-en="Free CS Advice" data-bm="Nasihat CS percuma">Free CS Advice</span></div></div>
     </div>
+  </section>
 
-    <script>
-        let currentVersion = 'B';
-        let currentVehicleType = 'car';
+  <section class="lead-form-wrap" id="quote">
+    <div class="lead-card">
+      <div class="lead-card-head"><h2 data-en="Get your free quote" data-bm="Dapatkan sebut harga percuma">Get your free quote</h2><p data-en="Just leave your details — our team will contact you." data-bm="Tinggalkan butiran anda — pasukan kami akan menghubungi anda.">Just leave your details — our team will contact you.</p></div>
+      <div class="field"><label for="name"><span data-en="FULL NAME" data-bm="NAMA PENUH">FULL NAME</span> <span class="req">*</span></label><div class="icon-input"><span class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span><input id="name" autocomplete="name" placeholder="e.g. Ahmad Razak" aria-describedby="eName" /></div><div class="err" id="eName" data-en="Please enter your full name." data-bm="Sila masukkan nama penuh anda.">Please enter your full name.</div></div>
+      <div class="field"><label for="mobile"><span data-en="MOBILE NUMBER (WHATSAPP)" data-bm="NOMBOR TELEFON (WHATSAPP)">MOBILE NUMBER (WHATSAPP)</span> <span class="req">*</span></label><div class="icon-input"><span class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg></span><input id="mobile" type="tel" inputmode="tel" autocomplete="tel" placeholder="012-345 6789" aria-describedby="eMobile" /></div><div class="err" id="eMobile" data-en="Enter a valid Malaysian mobile number, e.g. 012-345 6789." data-bm="Masukkan nombor telefon Malaysia yang sah, cth. 012-345 6789.">Enter a valid Malaysian mobile number, e.g. 012-345 6789.</div></div>
+      <div class="field"><label for="email"><span data-en="EMAIL ADDRESS" data-bm="ALAMAT E-MEL">EMAIL ADDRESS</span> <span class="req">*</span></label><div class="icon-input"><span class="ficon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><input id="email" type="email" inputmode="email" autocomplete="email" placeholder="e.g. ahmad@example.com" aria-describedby="eEmail" /></div><div class="err" id="eEmail" data-en="Enter a valid email address." data-bm="Masukkan alamat e-mel yang sah.">Enter a valid email address.</div></div>
+      <div class="consent-list">
+        <label class="consent-row"><input type="checkbox" id="pdpaConsent" aria-describedby="ePdpa"><span><span data-en="I agree to GMAT Insurtech's" data-bm="Saya bersetuju dengan">I agree to GMAT Insurtech's</span> <a href="#">Terms &amp; Conditions</a> <span data-en="and" data-bm="dan">and</span> <a href="#">Privacy Policy</a>. <span class="req">*</span></span></label>
+        <div class="err" id="ePdpa" data-en="Please tick this box to continue." data-bm="Sila tanda kotak ini untuk meneruskan.">Please tick this box to continue.</div>
+        <label class="consent-row"><input type="checkbox" id="marketingConsent"><span data-en="Yes, email me the newsletter, renewal reminders &amp; offers (optional)." data-bm="Ya, e-melkan saya surat berita, peringatan pembaharuan &amp; tawaran (pilihan).">Yes, email me the newsletter, renewal reminders &amp; offers (optional).</span></label>
+        <p class="ack" data-en="Your details are kept securely and used only to prepare your quote and contact you. If you opt in above, we will also send you a newsletter. Unsubscribe anytime." data-bm="Butiran anda disimpan dengan selamat dan hanya digunakan untuk menyediakan sebut harga dan menghubungi anda. Jika anda bersetuju di atas, kami juga akan menghantar surat berita. Boleh berhenti melanggan bila-bila masa.">Your details are kept securely and used only to prepare your quote and contact you. If you opt in above, we will also send you a newsletter. Unsubscribe anytime.</p>
+      </div>
 
-        function switchVersion(version) {
-            currentVersion = version;
-            const btnA = document.getElementById('btnVersionA');
-            const btnB = document.getElementById('btnVersionB');
-            const fieldsB = document.getElementById('versionBFields');
+      <button class="lead-submit" id="submitBtn" type="button"><span id="submitLbl" data-en="GET MY FREE QUOTE" data-bm="DAPATKAN SEBUT HARGA PERCUMA">GET MY FREE QUOTE</span><span aria-hidden="true">›</span></button>
+      <div class="lead-security"><span class="sec"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg><b data-en="100% Free" data-bm="100% Percuma">100% Free</b></span><span class="sec"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><b data-en="Takes 1 min" data-bm="Hanya 1 minit">Takes 1 min</b></span><span class="sec"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><b data-en="Data secured" data-bm="Data selamat">Data secured</b></span></div>
+    </div>
+  </section>
 
-            if (version === 'A') {
-                btnA.className = "px-2.5 py-1 rounded-md font-bold text-[10px] bg-blue-600 text-white transition-all";
-                btnB.className = "px-2.5 py-1 rounded-md font-bold text-[10px] text-slate-400 hover:text-white transition-all";
-                fieldsB.classList.add('hidden');
-                document.getElementById('vehicleNumber').removeAttribute('required');
-                document.getElementById('nricNumber').removeAttribute('required');
-            } else {
-                btnB.className = "px-2.5 py-1 rounded-md font-bold text-[10px] bg-emerald-500 text-white transition-all";
-                btnA.className = "px-2.5 py-1 rounded-md font-bold text-[10px] text-slate-400 hover:text-white transition-all";
-                fieldsB.classList.remove('hidden');
-                document.getElementById('vehicleNumber').setAttribute('required', 'required');
-                document.getElementById('nricNumber').setAttribute('required', 'required');
-            }
-        }
+  <section class="section">
+    <div class="section-title"><div><p data-en="COMPARE WITH CONFIDENCE" data-bm="BANDING DENGAN YAKIN">COMPARE WITH CONFIDENCE</p><h3 data-en="Panel insurers & takaful" data-bm="Panel insurans & takaful">Panel insurers & takaful</h3></div></div>
+    <div class="logo-strip"><div class="partner"><img src="https://d9p96y8yn87dz.cloudfront.net/assets/icons/newpartners/zurich_takaful.webp" alt="Zurich Takaful" loading="lazy"></div><div class="partner"><img src="https://d9p96y8yn87dz.cloudfront.net/assets/icons/newpartners/Ikhlas.webp" alt="Takaful Ikhlas" loading="lazy"></div><div class="partner"><img src="https://d9p96y8yn87dz.cloudfront.net/assets/icons/newpartners/Allians.webp" alt="Allianz" loading="lazy"></div><div class="partner"><img src="https://www.alfadzil.com/wp-content/uploads/2018/03/stm.png" alt="Takaful Malaysia" loading="lazy"></div></div>
+  </section>
 
-        function setVehicleType(type) {
-            currentVehicleType = type;
-            document.getElementById('vehicleTypeInput').value = type;
+  <section class="section">
+    <div class="section-title"><div><p data-en="PAY YOUR WAY" data-bm="BAYAR MENGIKUT CARA ANDA">PAY YOUR WAY</p><h3 data-en="Flexible payment options" data-bm="Pilihan pembayaran fleksibel">Flexible payment options</h3></div></div>
+    <div class="payimg"><img src="https://www.image2url.com/r2/default/images/1790850703524-e7124d0b-428e-4b0d-b72e-bd737f057c33.webp" alt="Accepted payment options: online banking, cards and debit, buy now pay later" loading="lazy" onerror="this.parentNode.style.display='none'"></div>
+    <p class="field-note" data-en="Available payment methods depend on the insurer and plan you choose." data-bm="Kaedah pembayaran bergantung pada insurer dan pelan yang dipilih.">Available payment methods depend on the insurer and plan you choose.</p>
+  </section>
 
-            const tabCar = document.getElementById('tabCar');
-            const tabMotor = document.getElementById('tabMotor');
+  <section class="section">
+    <div class="section-title"><div><p data-en="WHY GMAT" data-bm="KENAPA GMAT">WHY GMAT</p><h3 data-en="More than just a price" data-bm="Lebih daripada sekadar harga">More than just a price</h3></div></div>
+    <div class="benefits">
+      <div class="benefit"><div class="ico">🛟</div><div><h4 data-en="Claims assistance" data-bm="Bantuan tuntutan">Claims assistance</h4><p data-en="Get guidance when you need help after an accident or during the claims process." data-bm="Dapatkan panduan apabila anda memerlukan bantuan selepas kemalangan atau semasa proses tuntutan.">Get guidance when you need help after an accident or during the claims process.</p></div></div>
+      <div class="benefit"><div class="ico">⚖️</div><div><h4 data-en="Cover value guidance" data-bm="Panduan nilai perlindungan">Cover value guidance</h4><p data-en="Understand agreed value, market value and relevant add-ons before you buy." data-bm="Fahami agreed value, market value dan add-on berkaitan sebelum membeli.">Understand agreed value, market value and relevant add-ons before you buy.</p></div></div>
+      <div class="benefit"><div class="ico">🔔</div><div><h4 data-en="Renewal reminders" data-bm="Peringatan pembaharuan">Renewal reminders</h4><p data-en="Receive useful reminders before your policy or road tax reaches expiry." data-bm="Terima peringatan berguna sebelum polisi atau cukai jalan anda tamat tempoh.">Receive useful reminders before your policy or road tax reaches expiry.</p></div></div>
+    </div>
+  </section>
 
-            if (type === 'car') {
-                tabCar.className = "py-2 rounded-lg text-xs font-bold flex items-center justify-center space-x-1.5 transition-all bg-white text-blue-700 shadow-xs";
-                tabMotor.className = "py-2 rounded-lg text-xs font-bold flex items-center justify-center space-x-1.5 transition-all text-slate-500 hover:text-slate-900";
-            } else {
-                tabMotor.className = "py-2 rounded-lg text-xs font-bold flex items-center justify-center space-x-1.5 transition-all bg-white text-blue-700 shadow-xs";
-                tabCar.className = "py-2 rounded-lg text-xs font-bold flex items-center justify-center space-x-1.5 transition-all text-slate-500 hover:text-slate-900";
-            }
-        }
+  <section class="reward-section">
+    <div class="kicker" data-en="EXTRA PRIZES" data-bm="HADIAH TAMBAHAN">EXTRA PRIZES</div>
+    <h3 data-en="Monthly lucky draw" data-bm="Cabutan bertuah bulanan">Monthly lucky draw</h3>
+    <p data-en="Eligible customers are entered into our monthly draw to win Touch 'n Go vouchers and fuel cards. Terms and conditions apply." data-bm="Pelanggan yang layak akan disertakan dalam cabutan bulanan untuk memenangi baucar Touch 'n Go dan kad minyak. Terma dan syarat terpakai.">Eligible customers are entered into our monthly draw to win Touch 'n Go vouchers and fuel cards. Terms and conditions apply.</p>
+    <div class="reward-points"><span>Touch 'n Go</span><span>Petrol voucher</span><span>Monthly draw</span></div>
+  </section>
 
-        function toggleAccordion(id) {
-            const content = document.getElementById(id);
-            const icon = document.getElementById(id + 'Icon');
-            if (content.classList.contains('hidden')) {
-                content.classList.remove('hidden');
-                icon.classList.add('rotate-180');
-            } else {
-                content.classList.add('hidden');
-                icon.classList.remove('rotate-180');
-            }
-        }
+  <section class="section">
+    <div class="section-title"><div><p>FAQ</p><h3 data-en="Before you start" data-bm="Sebelum anda mula">Before you start</h3></div></div>
+    <div class="faq">
+      <details><summary><span data-en="Why only basic details?" data-bm="Mengapa hanya butiran asas?">Why only basic details?</span><span>＋</span></summary><p data-en="We keep it quick. Our team will contact you to collect your vehicle details and prepare your quote." data-bm="Kami pastikan ia pantas. Pasukan kami akan menghubungi anda untuk mendapatkan butiran kenderaan dan menyediakan sebut harga.">We keep it quick. Our team will contact you to collect your vehicle details and prepare your quote.</p></details>
+      <details><summary><span data-en="Do I have to buy after getting a quote?" data-bm="Adakah saya wajib beli selepas dapat sebut harga?">Do I have to buy after getting a quote?</span><span>＋</span></summary><p data-en="No. Compare your options first and decide later. There is no obligation to buy." data-bm="Tidak. Bandingkan dahulu dan buat keputusan kemudian. Anda tidak wajib membeli.">No. Compare your options first and decide later. There is no obligation to buy.</p></details>
+      <details><summary><span data-en="Can I ask a person for help?" data-bm="Boleh saya minta bantuan pegawai?">Can I ask a person for help?</span><span>＋</span></summary><p data-en="Yes. Tap the WhatsApp button at the top or bottom of the page and our team will help." data-bm="Ya. Tekan butang WhatsApp di bahagian atas atau bawah halaman dan pasukan kami akan membantu.">Yes. Tap the WhatsApp button at the top or bottom of the page and our team will help.</p></details>
+      <details><summary><span data-en="Is the 30% saving guaranteed?" data-bm="Adakah jimat 30% dijamin?">Is the 30% saving guaranteed?</span><span>＋</span></summary><p data-en="No. Savings depend on your vehicle, cover type and the insurer quotes available. Up to 30% is the maximum, not a promise for every customer. Terms apply." data-bm="Tidak. Penjimatan bergantung pada kenderaan, jenis perlindungan dan sebut harga insurer. Sehingga 30% ialah maksimum, bukan janji untuk setiap pelanggan. Terma terpakai.">No. Savings depend on your vehicle, cover type and the insurer quotes available. Up to 30% is the maximum, not a promise for every customer. Terms apply.</p></details>
+      <details><summary><span data-en="Will you send me newsletters?" data-bm="Adakah anda akan menghantar surat berita?">Will you send me newsletters?</span><span>＋</span></summary><p data-en="Only if you tick the optional newsletter box. You can unsubscribe at any time." data-bm="Hanya jika anda menanda kotak pilihan surat berita. Anda boleh berhenti melanggan bila-bila masa.">Only if you tick the optional newsletter box. You can unsubscribe at any time.</p></details>
+    </div>
+  </section>
 
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            const isFull = currentVersion === 'B';
-            const payload = {
-                event: "MOBILE_LEAD_SUBMISSION",
-                version: isFull ? "Version_B_Full" : "Version_A_Simple",
-                full_name: document.getElementById('fullName').value,
-                mobile_number: "+60" + document.getElementById('mobileNumber').value,
-                email: document.getElementById('emailAddress').value,
-                vehicle_type: currentVehicleType,
-                vehicle_no: isFull ? document.getElementById('vehicleNumber').value : null,
-                nric: isFull ? document.getElementById('nricNumber').value : null,
-                newsletter_opt_in: document.getElementById('newsletterConsent').checked,
-                timestamp: new Date().toISOString()
-            };
+  <footer class="footer"><img src="https://d9p96y8yn87dz.cloudfront.net/GMATImages/Logo/GMATTransparent.png" alt="GMAT" /><div>© 2026 GMAT Insurtech. All rights reserved.</div><div style="margin-top:5px">Privacy · Terms · Contact</div></footer>
 
-            document.getElementById('jsonPayloadOutput').innerText = JSON.stringify(payload, null, 2);
-            document.getElementById('devModal').classList.remove('hidden');
-            document.getElementById('devModal').classList.add('flex');
-        }
+  <div class="sticky-cta lead-sticky"><a class="wa" href="https://wa.me/60123456789" target="_blank" aria-label="WhatsApp"><svg class="wasvg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a><button class="primary" id="stickyQuote" type="button"><span data-en="GET FREE QUOTE" data-bm="DAPATKAN SEBUT HARGA PERCUMA">GET FREE QUOTE</span> →</button></div>
+</div>
 
-        function closeDevModal() {
-            document.getElementById('devModal').classList.add('hidden');
-            document.getElementById('devModal').classList.remove('flex');
-        }
-
-        window.onload = function() {
-            switchVersion('B');
-        }
-    </script>
+<div class="toast" id="toast" role="status" aria-live="polite">Please complete the highlighted details.</div>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mTitle">
+  <div class="sheet" style="position:relative">
+    <button class="close-btn" id="closeModal" aria-label="Close">×</button><div class="handle"></div><div class="success">✓</div>
+    <h3 id="mTitle" data-en="Thanks! We received your details" data-bm="Terima kasih! Kami telah menerima butiran anda">Thanks! We received your details</h3>
+    <p data-en="Our team can now contact you on WhatsApp or email to collect the vehicle details needed for your motor insurance quotation." data-bm="Pasukan kami kini boleh menghubungi anda melalui WhatsApp atau e-mel untuk mendapatkan butiran kenderaan yang diperlukan bagi sebut harga insurans motor.">Our team can now contact you on WhatsApp or email to collect the vehicle details needed for your motor insurance quotation.</p>
+    <div class="quote-preview"><div class="quote-row"><b data-en="Status" data-bm="Status">Status</b><span data-en="Request received" data-bm="Permintaan diterima">Request received</span></div><div class="quote-row"><b data-en="Next step" data-bm="Langkah seterusnya">Next step</b><span data-en="We will contact you" data-bm="Kami akan hubungi anda">We will contact you</span></div></div>
+    <button class="primary" onclick="window.open('https://wa.me/60123456789','_blank')"><svg class="wasvg" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg> <span data-en="CONTINUE WITH WHATSAPP" data-bm="TERUSKAN MELALUI WHATSAPP">CONTINUE WITH WHATSAPP</span></button>
+    <a class="secondary" id="upgradeLink" href="#" style="display:none" data-en="Get my exact quote faster: add vehicle number" data-bm="Dapatkan sebut harga tepat lebih pantas: tambah no. kenderaan">Get my exact quote faster: add vehicle number</a>
+  </div>
+</div>
+<script>
+const CONFIG={ENDPOINT:'',VERSION_B_URL:'',PAGE_VERSION:'A',CONSENT_TEXT_VERSION:'v1'}; // dev: set ENDPOINT (POST JSON) and VERSION_B_URL
+let lang='en',sending=false;
+const $=s=>document.querySelector(s),$$=s=>document.querySelectorAll(s);
+const MSG={fix:['Please check the highlighted fields.','Sila semak ruangan yang ditanda.'],fail:['Could not send. Please try again.','Gagal menghantar. Sila cuba lagi.'],sending:['SENDING…','MENGHANTAR…']};
+const say=k=>MSG[k][lang==='en'?0:1];
+function showToast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400)}
+function setLang(l){lang=l;document.documentElement.lang=l==='bm'?'ms':'en';$$('[data-en]').forEach(el=>{el.innerHTML=el.dataset[l]});$('#langBtn').textContent=l==='en'?'EN · BM':'BM · EN'}
+function normMobile(v){let d=v.replace(/[\s\-()]/g,'').replace(/^\+/,'');if(d.startsWith('60'))d=d.slice(2);if(d.startsWith('0'))d=d.slice(1);return /^1\d{8,9}$/.test(d)?'+60'+d:null}
+function flag(id,eid,bad){$('#'+id).classList.toggle('bad',bad);$('#'+id).setAttribute('aria-invalid',bad);$('#'+eid).classList.toggle('show',bad)}
+const uid=()=>crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(16).slice(2);
+function setBusy(b){sending=b;$('#submitBtn').disabled=b;$('#submitLbl').textContent=b?say('sending'):$('#submitLbl').dataset[lang]}
+async function submitLead(){
+  if(sending)return;
+  const name=$('#name').value.trim(),mob=normMobile($('#mobile').value),email=$('#email').value.trim();
+  const ok={n:name.length>=3,m:!!mob,e:/^\S+@\S+\.\S+$/.test(email),p:$('#pdpaConsent').checked};
+  flag('name','eName',!ok.n);flag('mobile','eMobile',!ok.m);flag('email','eEmail',!ok.e);$('#ePdpa').classList.toggle('show',!ok.p);
+  if(!(ok.n&&ok.m&&ok.e&&ok.p)){(document.querySelector('.icon-input .bad')||$('#pdpaConsent')).focus();showToast(say('fix'));return}
+  const q=new URLSearchParams(location.search);
+  const payload={event:'LEAD_CAPTURE',page_version:CONFIG.PAGE_VERSION,submission_id:uid(),full_name:name,mobile_number:mob,email:email,
+    marketing_opt_in:$('#marketingConsent').checked,pdpa_consent:true,consent_text_version:CONFIG.CONSENT_TEXT_VERSION,language:lang,
+    traffic_metadata:{source:q.get('utm_source')||'Direct/Organic',medium:q.get('utm_medium')||'None',campaign:q.get('utm_campaign')||'None',device:/Mobi|Android|iPhone/i.test(navigator.userAgent)?'Mobile':'Desktop',timestamp:new Date().toISOString()}};
+  setBusy(true);
+  try{
+    if(CONFIG.ENDPOINT){const r=await fetch(CONFIG.ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});if(!r.ok)throw new Error(r.status)}
+    else console.log('GMAT Lead Payload (no endpoint set):',payload);
+  }catch(e){setBusy(false);showToast(say('fail'));return}
+  if(CONFIG.VERSION_B_URL){const a=$('#upgradeLink');a.href=CONFIG.VERSION_B_URL;a.style.display='flex'}
+  openModal();
+}
+function openModal(){$('#modal').classList.add('show');$('#closeModal').focus()}
+function closeModal(){$('#modal').classList.remove('show');setBusy(false);$('#submitBtn').focus()}
+$('#submitBtn').addEventListener('click',submitLead);
+$$('#quote input').forEach(i=>i.addEventListener('keydown',e=>{if(e.key==='Enter'&&i.type!=='checkbox'&&i.type!=='radio'){e.preventDefault();submitLead()}}));
+$('#closeModal').addEventListener('click',closeModal);
+$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&$('#modal').classList.contains('show'))closeModal()});
+$('#stickyQuote').addEventListener('click',()=>$('#quote').scrollIntoView({behavior:'smooth',block:'start'}));
+$('#langBtn').addEventListener('click',()=>setLang(lang==='en'?'bm':'en'));
+if('IntersectionObserver' in window)new IntersectionObserver(([e])=>$('.sticky-cta').classList.toggle('hide',e.isIntersecting),{threshold:.2}).observe($('.lead-card'));
+</script>
 </body>
 </html>
